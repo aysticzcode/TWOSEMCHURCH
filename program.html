@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programs | T.W.O.S.E.M</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .program-card { background: #070707; border-left: 4px solid #D4AF37; transition: all 0.3s ease; position: relative; overflow: hidden; }
+        .program-card:hover { transform: translateX(8px); background: #0a0a0a; border-left-color: #fff; }
+        .special-tag { position: absolute; top: 0; right: 0; background: #D4AF37; color: #000; font-size: 8px; font-weight: 900; padding: 4px 12px; text-transform: uppercase; transform: rotate(0deg); border-bottom-left-radius: 10px; }
+        .contact-btn { border: 1px solid rgba(212,175,55,0.3); transition: 0.3s; }
+        .contact-btn:hover { background: #D4AF37; color: #000; }
+    </style>
+</head>
+<body class="bg-black text-white">
+
+    <nav class="w-full border-b border-yellow-600/30 sticky top-0 z-50 bg-black">
+        <div class="flex flex-col items-center py-4">
+            <a href="index.html">
+                <img src="logo.png" class="w-14 h-14 rounded-full border-2 border-yellow-600 mb-2 object-cover" onerror="this.src='https://via.placeholder.com/150/D4AF37/000000?text=WOS'">
+            </a>
+            <div class="flex flex-wrap justify-center gap-x-5 gap-y-2 px-4 mt-2 text-[10px] font-black uppercase tracking-widest">
+                <a href="index.html" class="text-gray-400 hover:text-white">Home</a>
+                <a href="program.html" class="gold-text">Programs</a>
+                <a href="pastors.html" class="text-gray-400 hover:text-white">Leadership</a>
+                <a href="live.html" class="text-gray-400 hover:text-white">Live Altar</a>
+                <a href="give.html" class="text-yellow-500 hover:text-yellow-400">Give</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-4xl mx-auto px-6 py-12">
+        <div class="text-center mb-12">
+            <h1 class="text-5xl font-black gold-text uppercase italic leading-none">Spiritual Roadmap</h1>
+            <p class="text-gray-500 tracking-[0.4em] text-[10px] uppercase mt-4 font-bold">Divine Appointments at W.O.S.E.M</p>
+        </div>
+
+        <div class="space-y-6">
+            <h2 class="text-xs font-black uppercase tracking-widest gold-text mb-4">Weekly Encounters</h2>
+            
+            <div class="program-card p-6 rounded-r-2xl">
+                <p class="text-yellow-600 font-black text-[9px] uppercase mb-1">Lord's Day Service</p>
+                <h3 class="text-xl font-black uppercase italic mb-2">Sunday School & Worship</h3>
+                <p class="text-gray-400 text-xs leading-relaxed">
+                    <span class="text-white font-bold italic">8:30 AM — 10:00 AM:</span> Spiritual Foundation (Sunday School)<br>
+                    <span class="text-white font-bold italic">10:00 AM — 12:30 PM:</span> Main Prophetic Service
+                </p>
+            </div>
+
+            <div class="program-card p-6 rounded-r-2xl">
+                <p class="text-yellow-600 font-black text-[9px] uppercase mb-1">Mothers & Fruitfulness</p>
+                <h3 class="text-xl font-black uppercase italic mb-2">Prayers for Pregnant Women</h3>
+                <p class="text-gray-400 text-xs leading-relaxed italic">A specialized prophetic hour for expectant mothers and divine fruitfulness.</p>
+            </div>
+
+            <div class="program-card p-6 rounded-r-2xl">
+                <p class="text-yellow-600 font-black text-[9px] uppercase mb-1">Mid-Week Fire</p>
+                <h3 class="text-xl font-black uppercase italic mb-2">Weekly Revival Service</h3>
+                <p class="text-gray-400 text-xs leading-relaxed"><span class="text-white font-bold italic">Wednesdays | 5:00 PM — 7:30 PM</span><br>Reigniting the altar for mid-week strength and breakthroughs.</p>
+            </div>
+
+            <h2 class="text-xs font-black uppercase tracking-widest gold-text mt-12 mb-4">Prophetic Revivals</h2>
+
+            <div class="program-card p-6 rounded-r-2xl border-l-white">
+                <div class="special-tag">High Intensity</div>
+                <p class="text-yellow-600 font-black text-[9px] uppercase mb-1">Monthly 3-Day Power Encounter</p>
+                <h3 class="text-2xl font-black uppercase italic mb-2 gold-text">RAIGBAMIPADA</h3>
+                <p class="text-gray-400 text-xs leading-relaxed italic">
+                    Held every <span class="text-white font-bold">14th, 15th, and 16th</span> of the month.<br>
+                    Time: 5:00 PM — 7:30 PM
+                </p>
+            </div>
+
+            <div class="program-card p-6 rounded-r-2xl">
+                <p class="text-yellow-600 font-black text-[9px] uppercase mb-1">Monthly Crossover</p>
+                <h3 class="text-xl font-black uppercase italic mb-2">End-of-Month Strong Revival</h3>
+                <p class="text-gray-400 text-xs leading-relaxed">
+                    Every last <span class="text-white font-bold">Wednesday, Thursday, and Friday</span> of the month.<br>
+                    Time: 5:00 PM — 7:30 PM
+                </p>
+            </div>
+
+            <div class="program-card p-6 rounded-r-2xl border-l-red-600">
+                <p class="text-red-500 font-black text-[9px] uppercase mb-1">Quarterly Sacrifice</p>
+                <h3 class="text-xl font-black uppercase italic mb-2 text-red-500">24-Hour Fasting & Prayer Marathon</h3>
+                <p class="text-gray-400 text-xs leading-relaxed italic">
+                    Held every 3 months. A deep spiritual labor.<br>
+                    <span class="text-white font-bold">7:00 AM — 7:00 AM (Next Morning)</span>
+                </p>
+            </div>
+        </div>
+
+        <div class="mt-20 p-8 bg-zinc-950 rounded-3xl border border-yellow-600/20 text-center">
+            <h2 class="text-lg font-black gold-text uppercase italic mb-6">For More Enquiries</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <a href="https://wa.me/2348161707688" class="contact-btn p-4 rounded-xl text-[10px] font-bold uppercase tracking-widest">WhatsApp</a>
+                <div class="contact-btn p-4 rounded-xl text-[10px] font-bold uppercase tracking-widest">FB: Joshua Ayinde</div>
+                <div class="contact-btn p-4 rounded-xl text-[10px] font-bold uppercase tracking-widest">TikTok: @Apostle Joshua</div>
+            </div>
+            <p class="mt-8 text-[9px] text-gray-600 uppercase italic font-bold">Note: Check the welcome page for notices on unscheduled revivals.</p>
+        </div>
+    </main>
+
+    <footer class="py-12 bg-zinc-950 text-center border-t border-white/5 mt-10">
+        <p class="text-[8px] text-gray-600 uppercase tracking-widest italic">© 2026 Wall of Salvation Evangelical Ministry</p>
+    </footer>
+
+    <script src="db.js"></script>
+</body>
+</html>

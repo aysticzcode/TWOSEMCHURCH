@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>T.W.O.S.E.M | The Wall of Salvation Evangelical Ministry</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;900&display=swap');
+        body { font-family: 'Inter', sans-serif; background-color: #000; color: white; margin: 0; overflow-x: hidden; }
+        
+        /* ROUND LOGO STYLE */
+        .logo-round { 
+            height: 100px; 
+            width: 100px; 
+            border-radius: 50%; 
+            object-fit: cover; 
+            border: 2px solid #D4AF37; 
+            padding: 2px;
+            background: #000;
+        }
+
+        .gold-text { color: #D4AF37; }
+
+        /* COMPACT HORIZONTAL NAV */
+        .nav-container {
+            display: flex;
+            overflow-x: auto;
+            white-space: nowrap;
+            gap: 1.2rem;
+            padding: 0 1.5rem;
+            scrollbar-width: none; 
+        }
+        .nav-container::-webkit-scrollbar { display: none; }
+
+        .nav-link { 
+            font-size: 8px; 
+            font-weight: 800; 
+            text-transform: uppercase; 
+            letter-spacing: 0.05em; 
+            color: #888; 
+            transition: 0.3s; 
+            flex-shrink: 0;
+        }
+        .nav-link:hover { color: #D4AF37; }
+        .active-link { color: #D4AF37; border-bottom: 2px solid #D4AF37; padding-bottom: 2px; }
+
+        .live-dot { height: 5px; width: 5px; background-color: #ff0000; border-radius: 50%; display: inline-block; margin-right: 3px; animation: pulse 1.5s infinite; }
+        @keyframes pulse { 0% { opacity: 1; } 50% { opacity: 0.3; } 100% { opacity: 1; } }
+    </style>
+</head>
+<body>
+
+    <div id="notice-bar" class="w-full bg-white/5 border-b border-white/10 py-3 px-6 text-center">
+        <p id="churchNotice" class="text-[10px] font-bold italic gold-text tracking-wide uppercase">
+            WAITING FOR DIVINE UPDATES...
+        </p>
+    </div>
+
+    <header class="py-8 flex flex-col items-center border-b border-white/5">
+        <img src="logo.png" alt="W.O.S.E.M" class="logo-round mb-4">
+        <div class="text-center px-4">
+            <h1 class="text-xl md:text-3xl font-black uppercase italic tracking-tighter gold-text">
+                The Wall of Salvation
+            </h1>
+            <p class="text-[8px] tracking-[0.4em] text-gray-500 uppercase mt-1 font-bold">
+                Evangelical Ministry
+            </p>
+        </div>
+    </header>
+
+    <nav class="sticky top-0 bg-black/95 backdrop-blur-md py-4 border-b border-white/5 z-50">
+        <div class="nav-container max-w-5xl mx-auto justify-start md:justify-center">
+            <a href="index.html" class="nav-link active-link">Home</a>
+            <a href="about.html" class="nav-link">About</a>
+            <a href="program.html" class="nav-link">Program</a>
+            <a href="pastor.html" class="nav-link">Pastor</a>
+            <a href="sermon.html" class="nav-link">Sermon</a>
+            <a href="give.html" class="nav-link">Give</a>
+            <a href="prayer-request.html" class="nav-link">
+                <span class="live-dot"></span>Prayer Request Live
+            </a>
+            <a href="contact.html" class="nav-link">Contact</a>
+        </div>
+    </nav>
+
+    <main class="min-h-[50vh] flex flex-col items-center justify-center text-center px-6 relative overflow-hidden">
+        <h2 class="text-[8rem] md:text-[15rem] font-black uppercase italic opacity-5 absolute pointer-events-none select-none">W.O.S.E.M</h2>
+        
+        <div class="relative z-10">
+            <p class="text-gray-400 text-[9px] font-bold uppercase tracking-[0.6em] mb-6">The Word • The Power • The Life</p>
+            <p class="max-w-md mx-auto text-sm italic text-gray-300 leading-relaxed font-light">
+                "For He is our shield and our fortress, The Wall of Salvation to all who believe."
+            </p>
+            
+            <div class="flex gap-3 justify-center pt-8">
+                <button class="bg-white text-black px-8 py-3 text-[9px] font-black uppercase rounded-full hover:bg-yellow-600 transition active:scale-95">Watch Live</button>
+                <button class="border border-white/20 px-8 py-3 text-[9px] font-black uppercase rounded-full hover:bg-white/5 transition active:scale-95">Prayer</button>
+            </div>
+        </div>
+    </main>
+
+    <footer class="py-16 border-t border-white/5 text-center">
+        <p class="text-[8px] text-gray-700 uppercase tracking-[0.4em]">© 2026 The Wall of Salvation Evangelical Ministry</p>
+    </footer>
+
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-app-compat.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.0.0/firebase-firestore-compat.js"></script>
+    <script src="db.js"></script>
+
+    <script>
+        function startLiveHome() {
+            if (typeof db !== 'undefined') {
+                db.collection("siteData").doc("announcements").onSnapshot((doc) => {
+                    if (doc.exists) {
+                        document.getElementById('churchNotice').innerText = doc.data().message;
+                    }
+                });
+            }
+        }
+        window.onload = startLiveHome;
+    </script>
+</body>
+</html>

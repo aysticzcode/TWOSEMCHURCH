@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leadership | T.W.O.S.E.M</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        .pastor-card { background: #050505; border: 1px solid #1a1a1a; border-radius: 30px; overflow: hidden; }
+        .pastor-img { width: 110%; height: 450px; object-fit: cover; filter: grayscale(10%); transition: all 0.5s ease; }
+        .pastor-card:hover .pastor-img { filter: grayscale(0%); transform: scale(1.03); }
+        .deacon-item { background: #080808; border-left: 2px solid #D4AF37; transition: 0.3s; }
+        .deacon-item:hover { background: #111; padding-left: 20px; }
+    </style>
+</head>
+<body class="bg-black text-white">
+
+    <nav class="w-full border-b border-yellow-600/30 sticky top-0 z-50 bg-black">
+        <div class="flex flex-col items-center py-4">
+            <a href="index.html">
+                <img src="logo.png" class="w-14 h-14 rounded-full border-2 border-yellow-600 mb-2 object-cover" onerror="this.src='https://via.placeholder.com/150/D4AF37/000000?text=WOS'">
+            </a>
+            <div class="flex flex-wrap justify-center gap-x-5 gap-y-2 px-4 mt-2">
+                <a href="index.html" class="text-[10px] font-black text-gray-400 hover:text-white uppercase tracking-widest">Home</a>
+                <a href="pastors.html" class="text-[10px] font-black gold-text uppercase tracking-widest">Leadership</a>
+                <a href="program.html" class="text-[10px] font-black text-gray-400 hover:text-white uppercase tracking-widest">Programs</a>
+                <a href="live.html" class="text-[10px] font-black text-gray-400 hover:text-white uppercase tracking-widest">Live</a>
+            </div>
+        </div>
+    </nav>
+
+    <main class="max-w-5xl mx-auto px-6 py-16">
+        <div class="text-center mb-16">
+            <h1 class="text-5xl font-black gold-text uppercase italic leading-none">Leadership</h1>
+            <p class="text-gray-500 tracking-[0.4em] text-[10px] uppercase mt-4 font-bold italic">Anointed Vessels of God</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 gap-12 items-start mb-24">
+            <div class="pastor-card shadow-2xl shadow-yellow-600/5">
+                <img src="pastor.png" class="pastor-img" alt="Apostle Joshua Ayinde" onerror="this.src='https://via.placeholder.com/400x600/111/D4AF37?text=Apostle+Joshua+Ayinde'">
+                <div class="p-8 text-center bg-zinc-950">
+                    <h2 class="text-2xl font-black uppercase italic gold-text">Apostle Joshua Ayinde</h2>
+                    <p class="text-[9px] text-gray-500 uppercase tracking-[0.3em] font-bold mt-1">General Overseer</p>
+                </div>
+            </div>
+
+            <div class="space-y-6 pt-4">
+                <h3 class="text-xs font-black uppercase tracking-widest text-yellow-600">The Mandate</h3>
+                <p class="text-gray-400 leading-relaxed text-sm">
+                    Apostle Joshua Ayinde is a prophetic voice to this generation. Under his leadership, .T.W.O.S.E.M has become a sanctuary for those seeking spiritual growth,🔥🔥🔥🔥 deliverance, and the manifest presence of God.A Right Apostle With True Calling  from the lord 
+                    He went to Bible college of a potential,well prominent Apostle Timothy Oluwa omo-obadareTHE FOUNDER OF CAC WOSEM ALSO THE FOUNDER OF(WOSEM BIBLE COLLEGE )
+                </p>
+                <p class="text-gray-500 italic text-xs">APOSTLE JOSHUA AYINDE"Building a Wall of Salvation for the nations through the fire of the Holy Ghost
+                MAY GOD HELP HIM THROUGH.p>
+                <div class="pt-4">
+                    <a href="prayer.html" class="btn-main inline-block px-8 py-3 text-[9px] font-black uppercase">Send Prayer Request</a>
+                </div>
+            </div>
+        </div>
+
+        <div class="mt-20">
+            <div class="text-center mb-12">
+                <h2 class="text-2xl font-black uppercase italic gold-text">Church Board</h2>
+                <div class="w-16 h-[2px] bg-yellow-600 mx-auto mt-2"></div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-4">
+                <div class="deacon-item p-5 rounded-r-lg">
+                    <p class="text-[9px] text-yellow-600 uppercase font-black mb-1">Deaconess</p>
+                    <h4 class="text-lg font-bold uppercase tracking-tight">C.A Hassan</h4>
+                </div>
+                <div class="deacon-item p-5 rounded-r-lg">
+                    <p class="text-[9px] text-yellow-600 uppercase font-black mb-1">Deaconess</p>
+                    <h4 class="text-lg font-bold uppercase tracking-tight">Monehin....</h4>
+                </div>
+                <div class="deacon-item p-5 rounded-r-lg">
+                    <p class="text-[9px] text-yellow-600 uppercase font-black mb-1">Deaconess</p>
+                    <h4 class="text-lg font-bold uppercase tracking-tight">Bukola....</h4>
+                </div>
+                <div class="deacon-item p-5 rounded-r-lg">
+                    <p class="text-[9px] text-yellow-600 uppercase font-black mb-1">Deaconess</p>
+                    <h4 class="text-lg font-bold uppercase tracking-tight">Oladimeji .</h4>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="py-12 bg-zinc-950 text-center border-t border-white/5 mt-20">
+        <p class="text-[8px] text-gray-600 uppercase tracking-widest italic">© 2026 Wall of Salvation Evangelical Ministry</p>
+    </footer>
+
+    <script src="db.js"></script>
+</body>
+</html>

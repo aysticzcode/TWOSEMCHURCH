@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prayer Request Live | The Wall of Salvation Evangelical Ministry</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;900&display=swap');
+        body { font-family: 'Inter', sans-serif; background-color: #000; color: white; margin: 0; }
+        .gold-text { color: #D4AF37; }
+        .prayer-box { background: #0a0a0a; border: 1px solid #1a1a1a; border-radius: 20px; padding: 30px; }
+        .gold-input { background: #000; border: 1px solid #333; color: white; border-radius: 12px; padding: 15px; width: 100%; outline: none; margin-bottom: 20px; }
+        .gold-input:focus { border-color: #D4AF37; }
+        .live-dot { height: 8px; width: 8px; background-color: #ff0000; border-radius: 50%; display: inline-block; margin-right: 8px; animation: pulse 1.5s infinite; }
+        @keyframes pulse { 0% { opacity: 1; } 50% { opacity: 0.3; } 100% { opacity: 1; } }
+    </style>
+</head>
+<body class="p-6">
+
+    <div class="max-w-xl mx-auto">
+        <header class="text-center py-10">
+            <div class="flex justify-center items-center mb-4">
+                <span class="live-dot"></span>
+                <p class="text-[10px] font-black uppercase gold-text tracking-[0.3em]">Live Intercession</p>
+            </div>
+            <h1 class="text-3xl font-black italic uppercase gold-text tracking-tighter">PRAYER REQUEST</h1>
+            <p class="text-gray-500 text-xs mt-2 italic">"The effectual fervent prayer of a righteous man availeth much."</p>
+        </header>
+
+        <div class="prayer-box shadow-2xl">
+            <form id="prayerForm">
+                <p class="text-[10px] font-black uppercase text-gray-500 mb-4 tracking-widest text-center">Submit your burden</p>
+                <input type="text" class="gold-input" placeholder="Your Full Name" required>
+                <textarea class="gold-input" rows="5" placeholder="Tell us your prayer request..." required></textarea>
+                
+                <a href="https://wa.me/2348161707688?text=Hello%20Apostle,%20I%20have%20a%20prayer%20request:" target="_blank" class="block">
+                    <button type="button" class="w-full py-4 bg-white text-black font-black uppercase text-[11px] rounded-full hover:bg-yellow-600 transition active:scale-95">
+                        Submit Prayer Request
+                    </button>
+                </a>
+            </form>
+        </div>
+
+        <div class="text-center mt-12">
+            <a href="index.html" class="text-[10px] font-black uppercase text-gray-700 hover:text-white tracking-[0.4em]">← EXIT TO HOME</a>
+        </div>
+    </div>
+
+</body>
+</html>
